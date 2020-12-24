@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'Minecraft PL';
+  src: url(fonts/Minecraft-PL.woff);
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url("images/background.jpg");
+  color: white;
+}
+
+.minecraft{
+  font-family: 'Minecraft PL', sans-serif !important;
+}
