@@ -45,7 +45,6 @@
             id="input-0"
             v-model="inputs.name"
             type="text"
-            required
           ></b-form-input>
         </b-form-group>
         <b-form-group>
@@ -59,11 +58,7 @@
             :key="index"
             class="d-flex justify-content-center align-items-center mb-3"
           >
-            <b-form-input
-              v-model="line.text"
-              type="text"
-              required
-            ></b-form-input>
+            <b-form-input v-model="line.text" type="text"></b-form-input>
             <b-btn
               class="ml-2"
               variant="dark"
@@ -120,11 +115,8 @@ export default {
         showMaterial: false,
         showPolishCharacters: false,
       },
-      lore: [],
+      lore: [{ text: '' }],
     }
-  },
-  mounted() {
-    this.lore.push({ text: '' })
   },
   methods: {
     parseColoredLine(text) {
@@ -168,7 +160,7 @@ export default {
         }
         fixedName += index === nameWords.length ? '' : ' '
       })
-      return fixedName
+      return fixedName.trim()
     },
     downloadFile() {
       const lore = []
