@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import 'assets/global.scss'
 import MinecraftTextJS from 'minecraft-text-js'
 import FileSaver from 'file-saver'
 import {
